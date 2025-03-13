@@ -4,11 +4,6 @@ import { useState } from "react";
 import { FaGithub, FaCopy, FaCheck } from 'react-icons/fa';               
 
 
-  
-  
-  
-
-
 export default function Welcome() {
   const [copied, setCopied] = useState(false);
   const copyCommand = () => {
@@ -19,8 +14,7 @@ export default function Welcome() {
   
   return (
     <main className="flex flex-col md:flex-row h-screen bg-white">
-      <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&display=swap" rel="stylesheet"></link>
-      <div style={{position: "relative", fontFamily: "EB Garamond"}} className="flex flex-col w-full md:w-1/2 h-full ">
+      <div style={{fontFamily: "var(--font-eb-garamond)"}} className="flex flex-col w-full md:w-1/2 h-full relative">
   <div className="p-16 h-74">
   <div className="mb-6 text-black">
             <h1 className="text-5xl md:text-6xl font-light leading-tight m-0">Dirac&apos;s</h1>
@@ -45,13 +39,13 @@ export default function Welcome() {
           </div>
           <div className="flex gap-4 mb-8">
             <a 
-              href="#learn" 
+              href="/docs" 
               className="flex items-center justify-center px-6 py-3 text-base transition-colors bg-black"
             >
               Learn more
             </a>
             <a 
-              href="https://github.com" 
+              href="https://github.com/dirac-antimatter" 
               className="flex items-center justify-center gap-2 px-6 py-3 bg-black text-base transition-colors"
             >
               <FaGithub className="text-lg" />
@@ -88,7 +82,7 @@ export default function Welcome() {
   </div>
   <div className="flex flex-col absolute top-1 left-2">
   <div className="mb-4">
-            <p className="text-sm sm:text-sm md:text-md italic text-gray-500">Inspired by qiskit | Powered by qiskit</p>
+            <p className="text-xs sm:text-sm md:text-md italic text-gray-500">Inspired by qiskit | Powered by qiskit</p>
           </div>
   </div>
 </div>
